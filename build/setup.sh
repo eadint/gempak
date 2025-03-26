@@ -14,7 +14,7 @@ TAG=${os_type}${os_version}
 if [ "$os_type" = "dev" ]; then
 	
 	# sudo docker run --entrypoint=/bin/bash --privileged -d -ti -e "container=docker" -v /awips2/repo/${dn}:/awips2/repo/${dn} $imgname:$imgvers-$os_version
-        sudo docker run -v `pwd`:/gempak:rw unidata/gempak-devel:centos6 /bin/bash -c "bash -xe /gempak/build/build_dev.sh"
+        sudo docker run -v `pwd`:/gempak:rw rockylinux:8 /bin/bash -c "bash -xe /gempak/build/build_dev.sh"
 
 elif [ "$os_type" = "centos" ]; then
 
